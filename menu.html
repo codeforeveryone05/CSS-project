@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <style type="text/css">
+  body
+  {
+      background-image: url('back.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 105%;
+  }
+label:after {
+  content: ": ";
+}
+
+label {
+  background-color: black;
+  color: black;
+  font-weight: bold;
+  padding: 6px;
+  text-transform: uppercase;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: white;
+}
+.css{
+  position:relative;
+  margin:0 0.5em;
+  padding:0 0.2em;
+}
+.css:before{
+  content:"";
+  z-index:-1;
+  left:-0.5em;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:orange;
+  position:absolute;
+  width:calc(100% - 0.5em);
+  border-left-color:transparent;
+}
+.css:after{
+  content:"";
+  z-index:-1;
+  right:0;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:orange;
+  position:absolute;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+  transform:rotate(180deg);
+  transform-origin:center right;
+}
+
+h1{
+  padding: 0px;
+}
+
+h3{
+  padding: 0px;
+}
+.pss{
+  position:relative;
+  margin:0 0.5em;
+  padding:0 0.2em;
+}
+.pss:before{
+  content:"";
+  z-index:-1;
+  left:-0.5em;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:orange;
+  position:absolute;
+  width:calc(100% - 0.5em);
+  border-left-color:transparent;
+}
+.pss:after{
+  content:"";
+  z-index:-1;
+  right:0;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:orange;
+  position:absolute;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+  transform:rotate(180deg);
+  transform-origin:center right;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+}
+.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+}
+.button {
+  background-color:#FF0000 ;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+} 
+
+</style>
+
+<script type="text/javascript">
+  function msg()
+{
+alert("Your order is placed");
+}
+</script>
+</head>
+
+<body>
+  
+
+<center><h1><span class="css">Welcome</span></h1>
+  <h3><span class="pss">To Canteen</span></h3><br></center>
+
+
+<label for="Drink">Choose your Drink</label><br><br>
+  <div class="custom-select" style="width:150px;">
+          <select>
+            <option value="0">Chai  </option>
+            <option value="1">Coffee</option>
+            <option>Coca Cola</option>
+            <option>Thumbs up</option>
+            <option>Sprite</option>
+            <option>7 UP </option>
+            <option>Lassi</option>
+            <option>Hot Chocolate</option>
+          </select>
+        </div>
+      
+<br>
+<center>
+<label for="Drink">Choose your Sandwich</label><br><br>
+  <div class="custom-select" style="width:150px;">
+          <select><br>
+            <option value="0">Veg Sandwich</option>
+            <option value="1">Grill Sandwich</option>
+            <option value="2">Cheese sandwich</option>
+            <option value="3">Cheese Masala Toast Sandwich </option>
+            <option value="4">Chocolate Sandwich </option>
+            <option value="5">Ice Chocolate Sandwich </option>
+            
+          </select>
+
+     </div>
+   </center>
+     <br>
+
+
+<label for="Breakfast">Choose your Breakfast</label><br><br>
+<div class="custom-select" style="width:150px;">
+         <select>
+            <option value="0">Poha</option>
+            <option value="1">samosa</option>
+            <option value="2">Wada Pav</option>
+            <option value="3">Aloo Paratha</option>
+            <option value="4">Medu Vada</option>
+            <option value="5">Upma</option>
+            <option value="6">Thepla</option>
+      </select>
+</div>
+<br>
+<center>
+<label for="Breakfast">Choose your Frankie</label><br><br>
+<div class="custom-select" style="width:150px;">
+         <select>
+            <option value="0">Veg Moyo Frankie</option>
+            <option value="1">Mayonnaise Frankie </option>
+            <option value="2">Noodles Frankie</option>
+         </select>
+        </div>
+        </center>
+    <div class="relative">    
+  <label for="Drink" >Choose your Chaat</label><br><br>
+  <div class="custom-select" style="width:150px;" >
+          <select><br>
+            <option value="0">Dahi Papadi Chaat</option>
+            <option value="1">Shev Puri</option>
+            <option value="2">Ragada Puri</option>
+            <option value="3">Bhel Puri</option>
+            <option value="4">Dahi Puri</option>
+            
+          </select>
+
+     </div>
+</div>
+    <script>
+var x, i, j, l, ll, selElmnt, a, b, c;
+
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+ 
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+ 
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+
+document.addEventListener("click", closeAllSelect);
+</script>  
+
+<form>
+     <center>
+      <input type="button" class="button"onclick="msg()" value="place order" />
+    </center>
+</form>
+</body>
+</html>
